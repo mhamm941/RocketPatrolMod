@@ -23,11 +23,12 @@ class Play extends Phaser.Scene {
         // add rocket (p1)
         this.p1Rocket = new Rocket(this, game.config.width/2, 431, 'rocket').setScale(0.5, 0.5).setOrigin(0, 0);
 
-        //add spaceship (x3)
+        //add spaceship (x4)
         this.ship01 = new Spaceship(this, game.config.width +192, 120, 'spaceship', 0, 30).setOrigin(0,0);
         this.ship02 = new Spaceship(this, game.config.width +96, 200, 'spaceship', 0, 20).setOrigin(0,0);
         this.ship03 = new Spaceship(this, game.config.width, 280, 'spaceship', 0, 10).setOrigin(0,0);
         this.ship04 = new Spaceship2(this, game.config.width +150, 160, 'smallShip', 0, 50).setOrigin(0, 0);
+        
         // define keyboard keys
         keyF = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.F);
         keyLEFT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT);
@@ -103,6 +104,7 @@ class Play extends Phaser.Scene {
         if (this.gameOver && Phaser.Input.Keyboard.JustDown(keyLEFT)) {
             this.scene.start('menuScene');
         }
+        
         //scroll starfield
         this.starfield.tilePositionX -= 4;
 
@@ -145,7 +147,7 @@ class Play extends Phaser.Scene {
     shipExplode(ship) {
         let ranExplode = Phaser.Math.Between(1, 4);
         var sprite, playSprite, sfx;
-        console.log(ranExplode);
+        //console.log(ranExplode);
         if(ranExplode == 1){
             sprite = 'explosion1';
             playSprite = 'explode1';
