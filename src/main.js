@@ -1,3 +1,15 @@
+/*
+    Matthew Hamm - Section E
+    POINT BREAKDOWN
+    - Create new scrolling sprite       (10)
+    - Control rocket after fired        (10)
+    - 4 random explosion SFX            (15)
+    - Replace UI borders                (15)
+    - Create new art *                  (25)
+    - Create a new spaceship            (25) 
+    
+    *new art includes: rocket, spaceship, UI, 4 random explosions
+*/
 let config = {
     type: Phaser.CANVAS,
     width: 640,

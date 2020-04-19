@@ -63,7 +63,7 @@ class Play extends Phaser.Scene {
             repeat: -1
         });
 
-        //add border and animate
+        //add border and play animation
         this.uiBorder = this.add.sprite(0, 0, 'border', 0).setOrigin(0, 0);
         this.uiBorder.anims.play('ui');
 
@@ -146,6 +146,7 @@ class Play extends Phaser.Scene {
     }
 
     shipExplode(ship) {
+        //randomize explosion assets
         let ranExplode = Phaser.Math.Between(1, 4);
         var sprite, playSprite, sfx;
         //console.log(ranExplode);
